@@ -4,7 +4,7 @@ export default (req, res) => {
   const { pair } = req.query || {};
 
   res.writeHead(301, {
-    location: `bnc://app.binance.com/trade/trade?at=spot&symbol=${pair}`,
+    location: `imessage://chat2gpt%40icloud.com&body=${pair}`,
   });
   res.end();
 };
