@@ -3,10 +3,10 @@
 export default (req, res) => {
   const { pair } = req.query || {};
   //url 转义处理 支持中文和特殊字符
-  pair = encodeURIComponent(pair)
+  encodedpair = encodeURIComponent(pair)
 
   res.writeHead(301, {
-    location: `imessage://chat2gpt%40icloud.com&body=${pair}`,
+    location: `imessage://chat2gpt%40icloud.com&body=${encodedpair}`,
   });
   res.end();
 };
